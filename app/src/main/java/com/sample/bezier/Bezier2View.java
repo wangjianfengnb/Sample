@@ -31,13 +31,20 @@ public class Bezier2View extends View {
         super(contex, attr);
         init();
     }
-
+    /**
+     * 100         startPoint(300,100)               endPoint(900,100)
+     *
+     *
+     *
+     * 300                      assistPoint(600,300)
+     *
+     */
     private void init() {
         mPaint = new Paint();
         mPath = new Path();
-        startPoint = new Point(300, 600);
-        endPoint = new Point(900, 600);
-        assistPoint = new Point(600, 900);
+        startPoint = new Point(300, 100);
+        endPoint = new Point(900, 100);
+        assistPoint = new Point(600, 300);
         // 抗锯齿
         mPaint.setAntiAlias(true);
         // 防抖动
@@ -50,6 +57,7 @@ public class Bezier2View extends View {
         mPaint.setColor(Color.RED); //画笔颜色
         mPaint.setStrokeWidth(10); //画笔宽度
         mPaint.setStyle(Paint.Style.STROKE);
+
         mPath.reset();
         //起点
         mPath.moveTo(startPoint.x, startPoint.y);

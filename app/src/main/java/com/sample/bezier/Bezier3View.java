@@ -16,7 +16,8 @@ import android.view.View;
  * Description:
  */
 public class Bezier3View extends View {
-    private Point assistPoint; //控制点
+    private Point assistPoint1; //控制点
+    private Point assistPoint2;
     private Paint mPaint; //画笔
     private Path mPath; //路径
     private Point startPoint; //起点
@@ -32,12 +33,21 @@ public class Bezier3View extends View {
         init();
     }
 
+
+    /**
+     * 150         startPoint(300,150)                                         endPoint(900,150)
+     * <p/>
+     * <p/>
+     * <p/>
+     * 450                   assistPoint1(500,450)   assistPoint2(700,450)
+     */
     private void init() {
         mPaint = new Paint();
         mPath = new Path();
-        startPoint = new Point(300, 600);
-        endPoint = new Point(900, 600);
-        assistPoint = new Point(600, 900);
+        startPoint = new Point(300, 150);
+        endPoint = new Point(900, 150);
+        assistPoint1 = new Point(500, 450);
+        assistPoint2 = new Point(700, 450);
         // 抗锯齿
         mPaint.setAntiAlias(true);
         // 防抖动
@@ -54,23 +64,25 @@ public class Bezier3View extends View {
         //起点
         mPath.moveTo(startPoint.x, startPoint.y);
         //mPath
-        mPath.quadTo(assistPoint.x, assistPoint.y, endPoint.x, endPoint.y);
+        mPath.cubicTo(assistPoint1.x, assistPoint1.y, assistPoint2.x, assistPoint2.y, endPoint.x, endPoint.y);
         //画path
         canvas.drawPath(mPath, mPaint);
         //画控制点
-        canvas.drawPoint(assistPoint.x, assistPoint.y, mPaint);
+        canvas.drawPoint(assistPoint1.x, assistPoint1.y, mPaint);
+        canvas.drawPoint(assistPoint2.x, assistPoint2.y, mPaint);
 
         //画线
-        canvas.drawLine(startPoint.x, startPoint.y, assistPoint.x, assistPoint.y, mPaint);
-        canvas.drawLine(endPoint.x, endPoint.y, assistPoint.x, assistPoint.y, mPaint);
+        canvas.drawLine(startPoint.x, startPoint.y, assistPoint1.x, assistPoint1.y, mPaint);
+        canvas.drawLine(endPoint.x, endPoint.y, assistPoint2.x, assistPoint2.y, mPaint);
+        canvas.drawLine(assistPoint1.x, assistPoint1.y, assistPoint2.x, assistPoint2.y, mPaint);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_MOVE:
-                assistPoint.x = (int) event.getX();
-                assistPoint.y = (int) event.getY();
+                assistPoint1.x = (int) event.getX();
+                assistPoint1.y = (int) event.getY();
                 invalidate();
                 break;
         }

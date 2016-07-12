@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="sample.recyclerview.com.recyclerviewsample">
+    package="com.sample">
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <application
@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".recycler.RecyclerActivity" />
+        <activity android:name=".bezier.BezierActivity" />
     </application>
 
 </manifest>

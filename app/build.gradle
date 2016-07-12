@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        applicationId "sample.recyclerview.com.recyclerviewsample"
+        applicationId "com.sample"
         minSdkVersion 9
         targetSdkVersion 23
         versionCode 1
