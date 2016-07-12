@@ -1,4 +1,4 @@
-package sample.recyclerview.com.recyclerviewsample;
+package com.sample.recycler;
 
 import android.content.Context;
 import android.graphics.Canvas;

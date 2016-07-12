@@ -1,4 +1,4 @@
-package sample.recyclerview.com.recyclerviewsample;
+package com.sample.recycler;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,14 +15,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.sample.R;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * Created by Jam on 16-5-18
  * Description:
  */
-public class MainActivity extends AppCompatActivity {
+public class RecyclerActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ItemTouchHelper itemTouchHelper;
     Adapter adapter;
@@ -46,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(RecyclerView.ViewHolder holder, int position) {
                 if (mToast == null) {
-                    mToast = Toast.makeText(MainActivity.this, "点击了：" + position, Toast.LENGTH_SHORT);
+                    mToast = Toast.makeText(RecyclerActivity.this, "点击了：" + position, Toast.LENGTH_SHORT);
                 } else {
                     mToast.setText("点击了：" + position);
                 }
@@ -109,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 if (actionState != ItemTouchHelper.ACTION_STATE_IDLE) {
                     viewHolder.itemView.setBackgroundColor(Color.LTGRAY);
                 }
-                Vibrator vibrator = (Vibrator) MainActivity.this.getSystemService(VIBRATOR_SERVICE);
+                Vibrator vibrator = (Vibrator) RecyclerActivity.this.getSystemService(VIBRATOR_SERVICE);
                 vibrator.vibrate(70);
                 super.onSelectedChanged(viewHolder, actionState);
             }
