@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.sample.bezier.BezierActivity;
+import com.sample.dagger.DaggerActivity;
 import com.sample.recycler.RecyclerActivity;
 
 /**
@@ -26,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void bezier(View v) {
-        startActivity(new Intent(this, BezierActivity   .class));
+        startActivity(new Intent(this, BezierActivity.class));
     }
+
+    public void dagger(View v) {
+        startActivity(new Intent(this, DaggerActivity.class));
+    }
+
+
 }

@@ -8,12 +8,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="recycler"
-        android:text="Recycler侧滑删除、长按拖动" />
+        android:text="Recycler侧滑删除、长按拖动"
+        android:textAllCaps="false" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="bezier"
         android:text="贝塞尔曲线" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="dagger"
+        android:text="Dagger2"
+        android:textAllCaps="false" />
 
 </LinearLayout>

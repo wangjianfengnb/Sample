@@ -64,7 +64,7 @@ public class Bezier3View extends View {
         //起点
         mPath.moveTo(startPoint.x, startPoint.y);
         //mPath
-        mPath.cubicTo(assistPoint1.x, assistPoint1.y, assistPoint2.x, assistPoint2.y, endPoint.x, endPoint.y);
+        mPath.cubicTo(assistPoint2.x, assistPoint2.y, assistPoint1.x, assistPoint1.y, endPoint.x, endPoint.y);
         //画path
         canvas.drawPath(mPath, mPaint);
         //画控制点
