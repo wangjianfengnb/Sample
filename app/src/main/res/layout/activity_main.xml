@@ -23,5 +23,17 @@
         android:onClick="dagger"
         android:text="Dagger2"
         android:textAllCaps="false" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="zxing"
+        android:text="zxing"
+        android:textAllCaps="false" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="retrofit"
+        android:text="Retrofit封装"
+        android:textAllCaps="false" />
 
 </LinearLayout>

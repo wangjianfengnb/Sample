@@ -9,6 +9,8 @@ import android.view.View;
 import com.sample.bezier.BezierActivity;
 import com.sample.dagger.DaggerActivity;
 import com.sample.recycler.RecyclerActivity;
+import com.sample.retrofit.RetrofitActivity;
+import com.sample.zxing.ZxingActivity;
 
 /**
  * Created by Jam on 16-7-12
@@ -32,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void dagger(View v) {
         startActivity(new Intent(this, DaggerActivity.class));
+    }
+
+    public void zxing(View v) {
+        startActivity(new Intent(this, ZxingActivity.class));
+    }
+    public void retrofit(View v) {
+        startActivity(new Intent(this, RetrofitActivity.class));
     }
 
 
