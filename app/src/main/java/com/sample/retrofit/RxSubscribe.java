@@ -75,8 +75,6 @@ public abstract class RxSubscribe<T> extends Subscriber<T> {
         } else {
             _onError("请求失败，请稍后再试...");
         }
-        if (showDialog())
-            dialog.dismiss();
     }
 
     protected abstract void _onNext(T t);
