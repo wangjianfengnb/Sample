@@ -1,6 +1,5 @@
 package com.sample.dagger.component;
 
-import com.sample.dagger.DaggerActivity;
 import com.sample.dagger.module.ActivityModule;
 
 import dagger.Component;
