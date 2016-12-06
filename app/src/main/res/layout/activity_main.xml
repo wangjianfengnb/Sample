@@ -8,8 +8,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="recycler"
+        android:id="@id/button"
         android:text="Recycler侧滑删除、长按拖动"
-        android:textAllCaps="false"
+        android:textAllCaps="false"/>
 
     <Button
         android:layout_width="wrap_content"
