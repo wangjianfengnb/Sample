@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="recycler"
@@ -23,12 +24,14 @@
         android:onClick="dagger"
         android:text="Dagger2"
         android:textAllCaps="false" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="zxing"
         android:text="zxing"
         android:textAllCaps="false" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,4 +39,10 @@
         android:text="Retrofit封装"
         android:textAllCaps="false" />
 
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:text="hahdfhadsfha "
+        android:gravity="center"
+        android:layout_height="match_parent" />
 </LinearLayout>

@@ -17,6 +17,7 @@ public interface ApiService {
     Observable<BaseModel<ArrayList<Benefit>>> rxBenefits(
             @Path("pageCount") int pageCount,
             @Path("pageIndex") int pageIndex
+
     );
 }
 

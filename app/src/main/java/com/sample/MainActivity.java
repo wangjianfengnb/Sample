@@ -1,10 +1,14 @@
 package com.sample;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sample.bezier.BezierActivity;
 import com.sample.dagger.DaggerActivity;
@@ -39,9 +43,13 @@ public class MainActivity extends AppCompatActivity {
     public void zxing(View v) {
         startActivity(new Intent(this, ZxingActivity.class));
     }
+
     public void retrofit(View v) {
         startActivity(new Intent(this, RetrofitActivity.class));
     }
 
 
 }
+
+
+
