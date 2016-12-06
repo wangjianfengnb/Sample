@@ -1,7 +1,5 @@
 package com.sample.dagger.module;
 
-import android.app.Application;
-
 import com.sample.dagger.bean.User;
 
 import java.util.concurrent.TimeUnit;
