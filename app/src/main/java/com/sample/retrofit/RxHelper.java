@@ -52,14 +52,12 @@ public class RxHelper {
             public void call(Subscriber<? super T> subscriber) {
                 try {
                     subscriber.onNext(data);
-                    subscriber.onCompleted();
                 } catch (Exception e) {
                     subscriber.onError(e);
+                } finally {
+                    subscriber.onCompleted();
                 }
             }
         });
-
     }
-
-
 }
